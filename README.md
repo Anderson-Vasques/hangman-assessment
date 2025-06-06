@@ -5,7 +5,7 @@ This is a simple Hangman game built with React and TypeScript as part of a techn
 ## 🔗 Live Demo
 
 You can try the game directly in your browser via StackBlitz:  
-👉 [Play the Hangman Game](https://stackblitz.com/~/github.com/Anderson-Vasques/hangman-assessment?file=app/components/Game.tsx)
+👉 [Play the Hangman Game](https://stackblitz.com/edit/nextjs-yxzykhiq)
 
 ## Features
 
