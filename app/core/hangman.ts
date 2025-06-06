@@ -54,3 +54,7 @@ export const getRandomWord = (difficulty?: DifficultyLevel): string => {
     }
     return words[Math.floor(Math.random() * words.length)];
 };
+
+export const getDisplayedWord = (word: string) => {
+    return word.split('').map((letter: string) => '_').join(' ')
+}

@@ -1,6 +1,14 @@
-import { getRandomWord, difficulties } from '../core/hangman';
+import { getRandomWord, getDisplayedWord } from '../core/hangman';
 
 
 export const Game = () => {
-  return <div> { getRandomWord(difficulties[2])} </div>;
+  const wordToBeGuessed = getRandomWord('hard');
+  const displayedWord = getDisplayedWord(wordToBeGuessed)
+
+
+  return (<div> 
+    <p>{ displayedWord }</p>
+    <p>{ wordToBeGuessed.split('').join(' ') }</p>
+    </div>
+  );
 };
