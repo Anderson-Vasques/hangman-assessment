@@ -5,7 +5,7 @@ export const MAX_CHANCES = 6;
 
 export const getRandomDifficulty = (): DifficultyLevel => difficulties[Math.floor(Math.random() * difficulties.length)];
 
-export const wordsByDifficulty: Record<DifficultyLevel, string[]> = {
+export const WORDS_BY_DIFFICULTY: Record<DifficultyLevel, string[]> = {
     easy: [
         "cat",
         "dog",
@@ -48,7 +48,7 @@ export const getRandomWord = (difficulty?: DifficultyLevel): string => {
     if (!difficulty) {
         difficulty = getRandomDifficulty();
     }
-    const words = wordsByDifficulty[difficulty];
+    const words = WORDS_BY_DIFFICULTY[difficulty];
     if (!words) {
         throw new Error(`No words found for difficulty level: ${difficulty}`);
     }
@@ -58,3 +58,6 @@ export const getRandomWord = (difficulty?: DifficultyLevel): string => {
 export const getDisplayedWord = (word: string) => {
     return word.split('').map((letter: string) => '_').join(' ')
 }
+
+export const isGameOver = (chances: number) => chances >= MAX_CHANCES;
+export const isWon = (word: string, guessedLeters: string[]) => guessedLeters.every((letter) => word.includes(letter))
