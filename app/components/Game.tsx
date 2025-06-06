@@ -1,5 +1,6 @@
-import { getRandomWord } from '../core/hangman';
+import { getRandomWord, difficulties } from '../core/hangman';
+
 
 export const Game = () => {
-  return <div> Game goes here </div>;
+  return <div> { getRandomWord(difficulties[2])} </div>;
 };
