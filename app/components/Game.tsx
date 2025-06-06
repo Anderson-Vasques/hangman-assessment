@@ -6,6 +6,7 @@ import {
   getDisplayedWord,
 } from '../core/hangman';
 import { useHangman } from '../hooks/useHangman';
+import { Person } from './Person';
 
 export const Game = () => {
   const {
@@ -27,7 +28,7 @@ export const Game = () => {
       <p className="text-lg mb-2">Guess the word by selecting letters!</p>
       <div className="bg-white p-6 rounded shadow-md w-full max-w-md">
         <div className="flex justify-center mb-4">
-          {/* handle the hangman figure here */}
+          <Person stage={attempts} />
         </div>
         <p className="text-xl font-mono mb-4">
           {getDisplayedWord(word, guessedLetters)}
