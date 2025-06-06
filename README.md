@@ -1,4 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hangman Game
+
+This is a simple Hangman game built with React and TypeScript as part of a technical assessment. The user interacts with the game by typing letters to guess a hidden word. The game keeps track of correct and incorrect guesses and visually represents the progress.
+
+## 🔗 Live Demo
+
+You can try the game directly in your browser via StackBlitz:  
+👉 [Play the Hangman Game](https://stackblitz.com/~/github.com/Anderson-Vasques/hangman-assessment?file=app/components/Game.tsx)
+
+## Features
+
+🟢 The user can:
+- Type letters to guess the hidden word
+- See a list of letters they’ve guessed so far
+- View underscores (`_`) representing each hidden letter
+- Win the game by guessing all the correct letters
+- Lose the game after 6 incorrect guesses
 
 ## Getting Started
 
