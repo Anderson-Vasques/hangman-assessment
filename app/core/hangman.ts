@@ -1,9 +1,11 @@
+import { randomInt } from "../utils/math";
+
 export type DifficultyLevel = "easy" | "medium" | "hard";
 export const difficulties: DifficultyLevel[] = ["easy", "medium", "hard"];
 
 export const MAX_CHANCES = 6;
 
-export const getRandomDifficulty = (): DifficultyLevel => difficulties[Math.floor(Math.random() * difficulties.length)];
+export const getRandomDifficulty = (): DifficultyLevel => difficulties[randomInt(difficulties.length)];;
 
 export const WORDS_BY_DIFFICULTY: Record<DifficultyLevel, string[]> = {
     easy: [
@@ -52,7 +54,7 @@ export const getRandomWord = (difficulty?: DifficultyLevel): string => {
     if (!words) {
         throw new Error(`No words found for difficulty level: ${difficulty}`);
     }
-    return words[Math.floor(Math.random() * words.length)];
+    return words[randomInt(words.length)];
 };
 
 export const getDisplayedWord = (word: string) => {
