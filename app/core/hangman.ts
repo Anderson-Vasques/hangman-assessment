@@ -60,4 +60,4 @@ export const getDisplayedWord = (word: string) => {
 }
 
 export const isGameOver = (chances: number) => chances >= MAX_CHANCES;
-export const isWon = (word: string, guessedLeters: string[]) => guessedLeters.every((letter) => word.includes(letter))
+export const isWon = (word: string, guessedLeters: string[]) => word.split('').every(letter => guessedLeters.includes(letter));
